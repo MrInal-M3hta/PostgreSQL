@@ -30,3 +30,7 @@ WHERE category IN (
     -- This subquery returns ('furniture') because the Standing Desk is 15999.00
     SELECT category FROM products WHERE price > 10000 
 );
+
+SELECT  stock, is_active
+FROM products
+WHERE is_active = TRUE AND stock = 0;
