@@ -1,4 +1,5 @@
 
+-- Important Rule ⭐ -> Always use ORDER BY with LIMIT and OFFSET.
 
 -- limit -> how many rows you want to return || “Return only this many rows.”
 -- offset -> how many rows we want to skip || “Skip this many rows before returning the rows.”
