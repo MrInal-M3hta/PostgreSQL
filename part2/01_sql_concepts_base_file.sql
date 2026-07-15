@@ -41,3 +41,4 @@ INSERT INTO products (name, category, price, stock, is_active, sku, description)
 
 
 SELECT * FROM products;
+SELECT * FROM public.products;

@@ -34,4 +34,4 @@
 SELECT name, price, stock, is_active
 FROM products
 WHERE is_active = true
-  AND (price < 1000 OR stock >= 100); 
+  AND (price < 1000 OR stock >= 100);
