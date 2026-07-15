@@ -1,8 +1,10 @@
 
 
-DROP TABLE IF EXISTS basics.students;
+DROP TABLE IF EXISTS basics.students; -- Here we are dropping the table if it already exists, so that we can create a new one without any errors.
 
-CREATE TABLE basics.students (
+-- Note: Here we write the table name as basics.students, which means we are creating a table named students inside the schema named basics. If we don't specify the schema name, it will create the table in the default public schema.
+
+CREATE TABLE basics.students ( 
     
     -- create an auto incrementing integer
     -- 1, -> 2, 3 and so on, 4, 5
@@ -33,5 +35,3 @@ INSERT INTO basics.students (name, email, age)
 VALUES 
   ('Sangam', 'mrinal@gmail.com', 55),
   ('John', 'mantu@gmail.com', 23);
-
-
