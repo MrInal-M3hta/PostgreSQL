@@ -19,3 +19,14 @@ WHERE stock = 0;
 SELECT name, stock, is_active
 FROM products
 WHERE is_active = FALSE;
+
+UPDATE products
+SET is_active = TRUE
+WHERE sku IN (SELECT sku FROM products WHERE price > 1001);
+
+UPDATE products
+SET stock = 0
+WHERE category IN (
+    -- This subquery returns ('furniture') because the Standing Desk is 15999.00
+    SELECT category FROM products WHERE price > 10000 
+);
