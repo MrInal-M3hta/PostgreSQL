@@ -13,7 +13,7 @@ SELECT name, category, price
 FROM products
 WHERE name ILIKE '%desk%'
 -- Anything before
---     desk, desk, DESK
+--     desk, Desk, DESK
 -- Anything after
 
 SELECT name, category, description
