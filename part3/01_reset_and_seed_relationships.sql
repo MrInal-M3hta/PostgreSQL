@@ -55,9 +55,10 @@ CREATE TABLE post_tags (
 
 
 
-INSERT INTO users (name) VALUES
-  ('Ananya'),
-  ('Rahul');
+INSERT INTO users (name) 
+  VALUES
+    ('Ananya'),
+    ('Rahul');
 
 
 INSERT INTO posts (user_id, title, status, views)
@@ -82,7 +83,7 @@ FROM posts
 WHERE title = 'PostgreSQL Joins Explained';
 
 INSERT INTO comments (post_id, body)
-SELECT id, 'Please add more examples.'
+SELECT id, 'Please add more examples.'  -- We can also write SELECT posts.id, 'Please add more examples.'
 FROM posts
 WHERE title = 'Backend APIs with PostgreSQL';
 
@@ -91,8 +92,8 @@ INSERT INTO tags (name) VALUES
   ('backend');
 
 INSERT INTO post_tags (post_id, tag_id)
-SELECT p.id, t.id
-FROM posts p, tags t
+SELECT p.id, t.id   -- p.id means posts.id and t.id means tags.id 
+FROM posts p, tags t  -- This is actually shorthand for: FROM posts AS p, tags AS t
 WHERE p.title = 'PostgreSQL Joins Explained'
   AND t.name = 'sql';
 
@@ -109,5 +110,3 @@ WHERE p.title = 'Backend APIs with PostgreSQL'
   AND t.name = 'backend';
 
 SELECT 'Part 3 reduced database reset and sample data inserted successfully.' AS message;
-
-

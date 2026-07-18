@@ -18,4 +18,49 @@ INNER JOIN post_tags
 INNER JOIN tags
   ON post_tags.tag_id = tags.id
 ORDER BY posts.title, tags.name;
-   
+
+
+/*
+
+ Visual Diagram
+
+
+posts
+----------------------------------
+id |        title 
+P1 | PostgreSQL Joins Explained
+P2 | Indexes for Beginners
+P3 | Backend APIs with PostgreSQL
+
+        │
+        │ JOIN
+        ▼
+
+post_tags
+-----------------
+post_id | tag_id
+P1      | T1
+P2      | T1
+P3      | T2
+
+        │
+        │ JOIN
+        ▼
+
+tags
+-----------------
+id | name
+T1 | sql
+T2 | backend
+
+After both joins, PostgreSQL can produce:
+|----------------------------------------------|
+|post_title                     | tag_name     |
+|-------------------------------|--------------|
+|PostgreSQL Joins Explained     |  sql         |
+|Indexes for Beginners          |  sql         |
+|Backend APIs with PostgreSQL   |  backend     |
+|----------------------------------------------|
+
+Then ORDER BY sorts those rows alphabetically by the title.
+*/
