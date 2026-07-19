@@ -21,3 +21,14 @@ FROM users
 INNER JOIN posts
   ON users.id = posts.user_id
 ORDER BY users.name, posts.title;
+
+
+
+
+-- Show all post written by 'Rahul' 
+
+SELECT p.*
+FROM posts AS p
+INNER JOIN users AS u
+    ON p.user_id = u.id
+WHERE u.name = 'Rahul';
