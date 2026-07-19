@@ -1,7 +1,7 @@
 
 
 -- count unique values
--- 
+-- DISTINCT keyword is used to count unique values in a column. It eliminates duplicate values and counts only the distinct occurrences.
 
 
 -- count how many unique posts are connected to each tag
